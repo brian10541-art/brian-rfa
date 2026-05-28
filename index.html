@@ -20,7 +20,7 @@
   --rule:#d9cab0;
   --navy:#1c2b45;
 }
-html{scroll-behavior:smooth;font-size:17px}
+html{scroll-behavior:smooth;font-size:18px}
 body{font-family:'Noto Sans TC',sans-serif;background:var(--paper);color:var(--ink);line-height:1.7;overflow-x:hidden}
 
 /* NAV */
@@ -38,7 +38,7 @@ nav{
 /* HERO */
 .hero{
   min-height:100vh;display:grid;grid-template-columns:1fr 1fr;
-  background:var(--ink);position:relative;overflow:hidden;padding-top:60px;
+  background:var(--ink);position:relative;overflow:hidden;padding-top:104px;
 }
 .hero::before{
   content:'';position:absolute;inset:0;
@@ -60,7 +60,7 @@ nav{
 .hero-eyebrow{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:0.3em;color:rgba(200,169,110,0.6);text-transform:uppercase;margin-bottom:16px}
 .hero-name{font-family:'Cormorant Garamond',serif;font-size:68px;font-weight:300;color:var(--paper);line-height:1.1;margin-bottom:6px;letter-spacing:0.02em}
 .hero-name em{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);font-size:58px}
-.hero-subtitle{font-size:13px;color:rgba(250,247,242,0.4);letter-spacing:0.12em;margin-bottom:40px}
+.hero-subtitle{font-size:14.5px;color:rgba(250,247,242,0.4);letter-spacing:0.12em;margin-bottom:40px}
 .hero-rule{width:40px;height:1px;background:var(--gold);opacity:0.5;margin-bottom:28px}
 .hero-tagline{font-family:'Noto Serif TC',serif;font-size:17px;font-weight:300;color:rgba(250,247,242,0.82);line-height:2;max-width:420px}
 .hero-tagline strong{color:var(--gold-light);font-weight:600}
@@ -95,13 +95,13 @@ nav{
 .diff{background:var(--gold-pale);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:24px 72px}
 .diff-inner{display:flex;align-items:flex-start;gap:16px;max-width:900px}
 .diff-icon{font-size:22px;margin-top:2px;flex-shrink:0}
-.diff-text{font-family:'Noto Serif TC',serif;font-size:15px;color:var(--ink-light);line-height:1.85}
+.diff-text{font-family:'Noto Serif TC',serif;font-size:16px;color:var(--ink-light);line-height:1.85}
 .diff-text strong{color:var(--accent);font-weight:600}
 
 /* SECTIONS */
 section{padding:88px 72px}
-.section-label{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:0.3em;color:var(--gold);text-transform:uppercase;margin-bottom:10px}
-.section-title{font-family:'Noto Serif TC',serif;font-size:28px;font-weight:600;color:var(--ink);margin-bottom:40px;line-height:1.4}
+.section-label{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:0.3em;color:var(--gold);text-transform:uppercase;margin-bottom:10px}
+.section-title{font-family:'Noto Serif TC',serif;font-size:32px;font-weight:600;color:var(--ink);margin-bottom:40px;line-height:1.4}
 
 /* ABOUT */
 .about{background:white;display:grid;grid-template-columns:380px 1fr;gap:0}
@@ -112,9 +112,9 @@ section{padding:88px 72px}
   background:linear-gradient(to right,transparent 80%,white 100%);
 }
 .about-content{padding:72px 56px;display:flex;flex-direction:column;justify-content:center}
-.about-name{font-family:'Noto Serif TC',serif;font-size:32px;font-weight:600;color:var(--ink);margin-bottom:6px}
+.about-name{font-family:'Noto Serif TC',serif;font-size:36px;font-weight:600;color:var(--ink);margin-bottom:6px}
 .about-role{font-size:13px;color:var(--ink-faint);letter-spacing:0.12em;margin-bottom:32px}
-.about-bio{font-size:15px;color:var(--ink-light);line-height:2;margin-bottom:32px}
+.about-bio{font-size:16.5px;color:var(--ink-light);line-height:2;margin-bottom:32px}
 .about-cert{display:flex;align-items:center;gap:16px;background:var(--paper-warm);border:1px solid var(--rule);padding:18px 22px;margin-top:24px}
 .about-cert img{height:52px;object-fit:contain}
 .about-cert-info{font-size:13px;color:var(--ink-faint);line-height:1.7}
@@ -127,8 +127,8 @@ section{padding:88px 72px}
 .audience-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .aud-card{background:white;border:1px solid var(--rule);border-top:3px solid var(--gold);padding:32px 26px}
 .aud-icon{font-size:30px;margin-bottom:16px;display:block}
-.aud-title{font-family:'Noto Serif TC',serif;font-size:15px;font-weight:600;color:var(--ink);margin-bottom:12px;line-height:1.5}
-.aud-desc{font-size:14px;color:var(--ink-faint);line-height:1.85}
+.aud-title{font-family:'Noto Serif TC',serif;font-size:16.5px;font-weight:600;color:var(--ink);margin-bottom:12px;line-height:1.5}
+.aud-desc{font-size:15.5px;color:var(--ink-faint);line-height:1.85}
 
 /* SERVICES */
 .services-section{background:var(--ink)}
@@ -157,10 +157,10 @@ section{padding:88px 72px}
 .svc-item.featured .svc-tier{background:var(--accent);color:white}
 .svc-body{padding:22px 28px;flex:1;display:flex;align-items:flex-start;gap:24px}
 .svc-info{flex:1}
-.svc-name{font-family:'Noto Serif TC',serif;font-size:15px;font-weight:600;color:var(--paper);margin-bottom:8px}
-.svc-desc{font-size:13.5px;color:rgba(250,247,242,0.55);line-height:1.8}
+.svc-name{font-family:'Noto Serif TC',serif;font-size:16.5px;font-weight:600;color:var(--paper);margin-bottom:8px}
+.svc-desc{font-size:14.5px;color:rgba(250,247,242,0.55);line-height:1.8}
 .svc-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-.svc-tag{background:rgba(255,255,255,0.06);border:1px solid rgba(200,169,110,0.15);font-size:12px;color:rgba(250,247,242,0.45);padding:3px 10px}
+.svc-tag{background:rgba(255,255,255,0.06);border:1px solid rgba(200,169,110,0.15);font-size:13px;color:rgba(250,247,242,0.45);padding:3px 10px}
 .svc-price-col{text-align:right;flex-shrink:0;min-width:140px}
 .svc-price{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--gold);line-height:1.2}
 .svc-price-note{font-size:11px;color:rgba(250,247,242,0.35);margin-top:4px;line-height:1.5}
@@ -169,7 +169,7 @@ section{padding:88px 72px}
 
 /* COMPARISON */
 .comparison{background:var(--paper-warm)}
-.comp-table{width:100%;border-collapse:collapse;font-size:15px}
+.comp-table{width:100%;border-collapse:collapse;font-size:16px}
 .comp-table th{font-family:'Noto Serif TC',serif;font-size:13px;font-weight:600;padding:14px 20px;text-align:left;background:var(--ink);color:var(--gold-light);border:1px solid rgba(255,255,255,0.06)}
 .comp-table td{padding:13px 20px;border:1px solid var(--rule);color:var(--ink-light);background:white;vertical-align:top;line-height:1.6}
 .comp-table tr:nth-child(even) td{background:var(--paper)}
@@ -181,14 +181,14 @@ section{padding:88px 72px}
 .step{flex:1;padding:28px 22px;border:1px solid var(--rule);border-right:none;background:white;position:relative}
 .step:last-child{border-right:1px solid var(--rule)}
 .step-num{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:var(--gold-light);line-height:1;margin-bottom:12px}
-.step-title{font-family:'Noto Serif TC',serif;font-size:14px;font-weight:600;color:var(--ink);margin-bottom:8px}
-.step-desc{font-size:13.5px;color:var(--ink-faint);line-height:1.75}
+.step-title{font-family:'Noto Serif TC',serif;font-size:15px;font-weight:600;color:var(--ink);margin-bottom:8px}
+.step-desc{font-size:14.5px;color:var(--ink-faint);line-height:1.75}
 .step-free{position:absolute;top:12px;right:10px;background:var(--gold-pale);border:1px solid var(--gold-light);color:var(--accent);font-size:10px;font-weight:600;padding:2px 8px}
 
 /* CALLOUT */
 .callout{background:var(--navy);padding:56px 72px;position:relative;overflow:hidden}
 .callout::before{content:'';position:absolute;top:-40px;right:-40px;width:280px;height:280px;border-radius:50%;background:rgba(200,169,110,0.06);pointer-events:none}
-.callout-q{font-family:'Noto Serif TC',serif;font-size:18px;font-weight:300;color:rgba(250,247,242,0.88);line-height:2.1;max-width:680px;margin-bottom:18px}
+.callout-q{font-family:'Noto Serif TC',serif;font-size:19px;font-weight:300;color:rgba(250,247,242,0.88);line-height:2.1;max-width:680px;margin-bottom:18px}
 .callout-q strong{color:var(--gold-light);font-weight:600}
 .callout-src{font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--gold);letter-spacing:0.1em}
 
@@ -353,7 +353,7 @@ footer{background:var(--ink);padding:48px 72px;display:flex;justify-content:spac
   margin-bottom:40px;padding-left:24px;
   border-left:2px solid rgba(200,169,110,0.4);
 }
-.story-body{font-family:'Noto Serif TC',serif;font-size:16px;font-weight:300;color:rgba(250,247,242,0.82);line-height:2.2;}
+.story-body{font-family:'Noto Serif TC',serif;font-size:17.5px;font-weight:300;color:rgba(250,247,242,0.82);line-height:2.2;}
 .story-body p{margin-bottom:22px}
 .story-body p:last-child{margin-bottom:0}
 .story-body strong{color:var(--gold-light);font-weight:600}
@@ -387,7 +387,7 @@ footer{background:var(--ink);padding:48px 72px;display:flex;justify-content:spac
 .hero-pills{display:flex;flex-direction:column;gap:8px;margin-bottom:36px;}
 .hero-pill{
   display:inline-flex;align-items:center;gap:8px;
-  font-family:'Noto Sans TC',sans-serif;font-size:12.5px;
+  font-family:'Noto Sans TC',sans-serif;font-size:14px;
   color:rgba(250,247,242,0.6);letter-spacing:0.04em;
   padding:6px 0;
   border-bottom:1px solid rgba(200,169,110,0.1);
@@ -400,9 +400,171 @@ footer{background:var(--ink);padding:48px 72px;display:flex;justify-content:spac
   .hero-pills{gap:6px;margin-bottom:28px;}
   .hero-pill{font-size:12px;}
 }
+
+/* FRAUD ALERT BANNER (top sticky strip) */
+.fraud-banner{
+  position:fixed;top:60px;left:0;right:0;z-index:99;
+  background:linear-gradient(90deg,#8b1a0f,#a52617);
+  color:#fff;padding:10px 48px;
+  display:flex;align-items:center;justify-content:center;gap:14px;
+  font-family:'Noto Sans TC',sans-serif;font-size:14px;
+  border-bottom:1px solid rgba(255,255,255,0.15);
+  transition:transform .3s;
+}
+.fraud-banner-icon{font-size:17px;flex-shrink:0}
+.fraud-banner-text{line-height:1.5}
+.fraud-banner-text strong{font-weight:700;color:#ffe08a}
+.fraud-banner a{color:#fff;text-decoration:underline;font-weight:600;white-space:nowrap}
+.fraud-banner-close{
+  position:absolute;right:20px;background:none;border:none;color:rgba(255,255,255,0.7);
+  font-size:20px;cursor:pointer;line-height:1;padding:4px;
+}
+.fraud-banner-close:hover{color:#fff}
+.fraud-banner.hidden{transform:translateY(-200%)}
+
+/* FRAUD SECTION (full block) */
+.fraud-section{
+  background:#1a1410;padding:72px 72px;position:relative;overflow:hidden;
+  border-top:1px solid rgba(165,38,23,0.3);
+}
+.fraud-section::before{
+  content:'!';position:absolute;right:60px;top:50%;transform:translateY(-50%);
+  font-family:'Cormorant Garamond',serif;font-size:280px;font-weight:300;
+  color:rgba(165,38,23,0.06);line-height:1;pointer-events:none;
+}
+.fraud-inner{max-width:900px;position:relative;z-index:2}
+.fraud-head{display:flex;align-items:baseline;gap:20px;margin-bottom:28px;flex-wrap:wrap}
+.fraud-caution{
+  font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:600;
+  color:#c4302b;line-height:1;letter-spacing:0.02em;
+}
+.fraud-caution-zh{
+  font-family:'Noto Serif TC',serif;font-size:26px;font-weight:600;
+  color:var(--paper);
+}
+.fraud-body{
+  display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:24px;
+}
+.fraud-col{
+  font-family:'Noto Sans TC',sans-serif;font-size:15px;
+  color:rgba(250,247,242,0.75);line-height:1.95;
+}
+.fraud-col strong{color:#ffb4a0;font-weight:600}
+.fraud-official{
+  margin-top:32px;padding:24px 28px;
+  background:rgba(200,169,110,0.07);border:1px solid rgba(200,169,110,0.25);
+}
+.fraud-official-title{
+  font-family:'Noto Serif TC',serif;font-size:15px;color:var(--gold);
+  font-weight:600;margin-bottom:14px;
+}
+.fraud-channels{display:flex;flex-wrap:wrap;gap:10px}
+.fraud-channel{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,0.05);border:1px solid rgba(200,169,110,0.2);
+  padding:8px 16px;font-size:13.5px;color:rgba(250,247,242,0.85);
+  font-family:'Noto Sans TC',sans-serif;
+}
+.fraud-channel strong{color:var(--gold);font-weight:600}
+
+@media(max-width:767px){
+  .fraud-banner{padding:10px 40px 10px 16px;font-size:12.5px;gap:8px}
+  .fraud-banner-text{text-align:left}
+  .fraud-banner-close{right:10px}
+  .fraud-section{padding:48px 24px}
+  .fraud-section::before{font-size:160px;right:10px}
+  .fraud-head{gap:12px;margin-bottom:20px}
+  .fraud-caution{font-size:32px}
+  .fraud-caution-zh{font-size:20px}
+  .fraud-body{grid-template-columns:1fr;gap:18px}
+  .fraud-col{font-size:14px}
+  .fraud-official{padding:18px 20px}
+}
+@media(max-width:1024px) and (min-width:768px){
+  .fraud-section{padding:56px 40px}
+  .fraud-banner{padding-left:40px;padding-right:40px}
+}
+
+/* QUICK BOOKING SECTION */
+.booking{background:var(--paper);padding:88px 72px;}
+.booking-inner{max-width:880px;margin:0 auto}
+.booking-head{text-align:center;margin-bottom:44px}
+.booking-title{
+  font-family:'Noto Serif TC',serif;font-size:34px;font-weight:600;
+  color:var(--ink);margin-bottom:14px;letter-spacing:0.04em;
+}
+.booking-sub{font-size:15px;color:var(--ink-faint);line-height:1.9}
+.booking-card{
+  background:#fff;border:1px solid var(--rule);
+  padding:48px 52px;box-shadow:0 4px 30px rgba(23,19,15,0.06);
+}
+.booking-q{
+  font-family:'Noto Serif TC',serif;font-size:17px;color:var(--ink);
+  font-weight:600;margin-bottom:18px;
+}
+.booking-topics{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px 20px;margin-bottom:36px;
+}
+.booking-topic{
+  display:flex;align-items:center;gap:10px;cursor:pointer;
+  font-size:15px;color:var(--ink-light);font-family:'Noto Sans TC',sans-serif;
+  padding:6px 0;
+}
+.booking-topic input{
+  width:18px;height:18px;accent-color:var(--accent);cursor:pointer;flex-shrink:0;
+}
+.booking-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 28px;margin-bottom:28px}
+.booking-field{display:flex;flex-direction:column;gap:8px}
+.booking-label{font-size:14px;color:var(--ink);font-weight:500;font-family:'Noto Sans TC',sans-serif}
+.booking-label span{color:var(--accent)}
+.booking-input{
+  border:1px solid var(--rule);background:var(--paper);
+  padding:13px 16px;font-size:15px;color:var(--ink);
+  font-family:'Noto Sans TC',sans-serif;width:100%;
+  transition:border-color .2s;
+}
+.booking-input:focus{outline:none;border-color:var(--gold)}
+.booking-select{
+  border:1px solid var(--rule);background:var(--paper);
+  padding:13px 16px;font-size:15px;color:var(--ink);
+  font-family:'Noto Sans TC',sans-serif;width:100%;cursor:pointer;
+}
+.booking-submit{
+  display:block;width:100%;margin-top:12px;
+  background:var(--accent);color:#fff;border:none;
+  font-size:16px;font-weight:700;letter-spacing:0.1em;
+  padding:17px;cursor:pointer;font-family:'Noto Serif TC',serif;
+  transition:background .2s;
+}
+.booking-submit:hover{background:#a8472f}
+.booking-note{
+  text-align:center;font-size:13px;color:var(--ink-faint);
+  margin-top:18px;line-height:1.8;
+}
+.booking-note strong{color:var(--accent)}
+
+@media(max-width:767px){
+  .booking{padding:52px 24px}
+  .booking-title{font-size:26px}
+  .booking-card{padding:28px 22px}
+  .booking-topics{grid-template-columns:1fr 1fr;gap:8px 12px;margin-bottom:28px}
+  .booking-topic{font-size:14px}
+  .booking-grid{grid-template-columns:1fr;gap:18px;margin-bottom:22px}
+}
+@media(max-width:1024px) and (min-width:768px){
+  .booking{padding:64px 40px}
+  .booking-topics{grid-template-columns:repeat(2,1fr)}
+}
 </style>
 </head>
 <body>
+
+<!-- FRAUD ALERT BANNER -->
+<div class="fraud-banner" id="fraudBanner">
+  <span class="fraud-banner-icon">⚠️</span>
+  <span class="fraud-banner-text"><strong>防詐騙聲明：</strong>近期有不肖人士冒用「Brian」名義於社群假冒招攬。本人不會主動私訊推銷投資商品，唯一官方聯繫為 LINE <strong>brian10541</strong> 與 IG <strong>@briansharelife</strong>。<a href="#fraud">了解更多 →</a></span>
+  <button class="fraud-banner-close" onclick="closeFraudBanner()" aria-label="關閉">×</button>
+</div>
 
 <nav>
   <div class="nav-brand">Brian · RFA</div>
@@ -412,6 +574,7 @@ footer{background:var(--ink);padding:48px 72px;display:flex;justify-content:spac
     <li><a href="#audience">適合對象</a></li>
     <li><a href="#services">服務收費</a></li>
     <li><a href="#process">合作流程</a></li>
+    <li><a href="#booking">快速預約</a></li>
     <li><a href="#contact">預約初診</a></li>
   </ul>
   <button class="nav-hamburger" onclick="toggleMenu()" aria-label="選單">
@@ -424,6 +587,7 @@ footer{background:var(--ink);padding:48px 72px;display:flex;justify-content:spac
   <a href="#audience" onclick="closeMenu()">適合對象</a>
   <a href="#services" onclick="closeMenu()">服務收費</a>
   <a href="#process" onclick="closeMenu()">合作流程</a>
+  <a href="#booking" onclick="closeMenu()">快速預約</a>
   <a href="#contact" onclick="closeMenu()">預約初診</a>
 </div>
 
@@ -782,6 +946,93 @@ footer{background:var(--ink);padding:48px 72px;display:flex;justify-content:spac
   </div>
 </section>
 
+<!-- QUICK BOOKING -->
+<section class="booking" id="booking">
+  <div class="booking-inner">
+    <div class="booking-head">
+      <div class="section-label" style="text-align:center;margin-bottom:10px;">Quick Booking</div>
+      <h2 class="booking-title">快速預約諮詢</h2>
+      <p class="booking-sub">填寫以下資訊，我會在指定時段主動與你聯繫，安排免費初診。<br>初診完全免費、不推銷任何金融商品。</p>
+    </div>
+
+    <div class="booking-card">
+      <div class="booking-q">想透過諮詢解決什麼問題？（可複選）</div>
+      <div class="booking-topics">
+        <label class="booking-topic"><input type="checkbox" name="topic" value="全生涯理財規劃"> 全生涯理財規劃</label>
+        <label class="booking-topic"><input type="checkbox" name="topic" value="制定退休計畫"> 制定退休計畫</label>
+        <label class="booking-topic"><input type="checkbox" name="topic" value="家庭收支管理"> 家庭收支管理</label>
+        <label class="booking-topic"><input type="checkbox" name="topic" value="保單健檢規劃"> 保單健檢規劃</label>
+        <label class="booking-topic"><input type="checkbox" name="topic" value="資產配置投資"> 資產配置投資</label>
+        <label class="booking-topic"><input type="checkbox" name="topic" value="教育基金準備"> 教育基金準備</label>
+        <label class="booking-topic"><input type="checkbox" name="topic" value="國內稅務諮詢"> 國內稅務諮詢</label>
+        <label class="booking-topic"><input type="checkbox" name="topic" value="資產移轉繼承"> 資產移轉繼承</label>
+        <label class="booking-topic"><input type="checkbox" name="topic" value="負債整合改善"> 負債整合改善</label>
+      </div>
+
+      <div class="booking-grid">
+        <div class="booking-field">
+          <label class="booking-label">您的姓名 <span>*</span></label>
+          <input class="booking-input" type="text" id="bk-name" placeholder="如何稱呼您">
+        </div>
+        <div class="booking-field">
+          <label class="booking-label">手機號碼 <span>*</span></label>
+          <input class="booking-input" type="tel" id="bk-phone" placeholder="例：0912345678">
+        </div>
+        <div class="booking-field">
+          <label class="booking-label">LINE ID</label>
+          <input class="booking-input" type="text" id="bk-line" placeholder="方便聯繫的 LINE ID">
+        </div>
+        <div class="booking-field">
+          <label class="booking-label">電子郵件</label>
+          <input class="booking-input" type="email" id="bk-email" placeholder="your@email.com">
+        </div>
+      </div>
+
+      <div class="booking-field" style="margin-bottom:28px;">
+        <label class="booking-label">指定聯繫時段</label>
+        <select class="booking-select" id="bk-time">
+          <option>平日上午（08:00 - 12:00）</option>
+          <option>平日下午（12:00 - 18:00）</option>
+          <option>平日晚上（18:00 - 21:00）</option>
+          <option>假日（時段不限）</option>
+          <option>皆可，由顧問安排</option>
+        </select>
+      </div>
+
+      <button class="booking-submit" onclick="submitBooking()">送出預約，等待專人聯繫 →</button>
+      <p class="booking-note">送出後將為您開啟<strong>官方預約表單</strong>完成最後確認，確保資料安全送達本人信箱。</p>
+    </div>
+  </div>
+</section>
+
+<!-- FRAUD WARNING -->
+<section class="fraud-section" id="fraud">
+  <div class="fraud-inner">
+    <div class="fraud-head">
+      <span class="fraud-caution">Caution !</span>
+      <span class="fraud-caution-zh">慎防金融詐騙與冒名假帳號</span>
+    </div>
+
+    <div class="fraud-body">
+      <div class="fraud-col">
+        近期社群媒體上出現<strong>冒用「Brian」名義與形象照片</strong>的假帳號，透過私訊主動加好友、佯稱提供投資諮詢或推薦金融商品。這些都<strong>不是本人</strong>，請勿輕信、勿匯款、勿提供個人financial資料。
+      </div>
+      <div class="fraud-col">
+        身為 <strong>Fee-only 獨立財務顧問</strong>，我<strong>不販售任何金融商品、不收取佣金、不會主動私訊推銷</strong>。所有服務一律透過下方官方管道預約，並以正式初診流程進行。若有任何帳號自稱是我並要求匯款，<strong>必為詐騙</strong>。
+      </div>
+    </div>
+
+    <div class="fraud-official">
+      <div class="fraud-official-title">✓ 我的唯一官方聯繫管道</div>
+      <div class="fraud-channels">
+        <span class="fraud-channel">LINE　<strong>brian10541</strong></span>
+        <span class="fraud-channel">Email　<strong>brian10541@gmail.com</strong></span>
+        <span class="fraud-channel">Instagram　<strong>@briansharelife</strong></span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section style="background:var(--ink);padding:72px;text-align:center" id="contact">
   <div class="section-label" style="color:var(--gold-light);text-align:center;margin-bottom:12px">Contact</div>
@@ -852,6 +1103,26 @@ function closeMenu(){
 }
 // Close menu on scroll
 window.addEventListener('scroll', function(){ closeMenu(); });
+</script>
+
+<script>
+function closeFraudBanner(){
+  var b = document.getElementById('fraudBanner');
+  if(b){ b.classList.add('hidden'); document.body.classList.add('no-fraud-banner'); }
+}
+</script>
+
+<script>
+function submitBooking(){
+  var name = document.getElementById('bk-name').value.trim();
+  var phone = document.getElementById('bk-phone').value.trim();
+  if(!name || !phone){
+    alert('請填寫姓名與手機號碼，方便我與您聯繫 :)');
+    return;
+  }
+  // Open official Google Form for secure submission
+  window.open('https://docs.google.com/forms/d/e/1FAIpQLSd4WlfHOTRwOe0uYGdEZEEFsKXVcMWcGfCZ3p4KuAPisswg4Q/viewform?usp=dialog','_blank');
+}
 </script>
 </body>
 </html>
