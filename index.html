@@ -36,9 +36,11 @@ nav{
   padding:0 48px;height:60px;border-bottom:1px solid rgba(195,160,80,0.15);
 }
 .nav-brand{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold);letter-spacing:0.08em}
-.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links{display:flex;gap:24px;list-style:none;align-items:center}
 .nav-links a{font-size:12px;letter-spacing:0.15em;color:rgba(251,247,238,0.55);text-decoration:none;transition:color .2s}
 .nav-links a:hover{color:var(--gold)}
+.nav-links .tool-link{padding:7px 12px;border:1px solid rgba(195,160,80,.42);color:var(--gold)}
+.nav-links .tool-link:hover{background:rgba(195,160,80,.10);border-color:var(--gold)}
 
 /* HERO */
 .hero{
@@ -576,6 +578,7 @@ footer{background:var(--ink);padding:48px 72px;display:flex;justify-content:spac
 <nav>
   <div class="nav-brand">Brian · RFA</div>
   <ul class="nav-links">
+    <li><a class="tool-link" href="./tools/financial-assessment/">基本財務評測</a></li>
     <li><a href="#about">關於我</a></li>
     <li><a href="#story">我的故事</a></li>
     <li><a href="#audience">適合對象</a></li>
@@ -590,6 +593,7 @@ footer{background:var(--ink);padding:48px 72px;display:flex;justify-content:spac
   </button>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
+  <a href="./tools/financial-assessment/" onclick="closeMenu()">基本財務評測</a>
   <a href="#about" onclick="closeMenu()">關於我</a>
   <a href="#story" onclick="closeMenu()">我的故事</a>
   <a href="#audience" onclick="closeMenu()">適合對象</a>

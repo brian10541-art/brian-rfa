@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="briansharelife 基本財務評測：快速檢視現金流、負債、投資與緊急準備。">
+  <title>基本財務評測｜briansharelife</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<main>
+  <header class="topbar">
+    <a class="brand" href="../../" aria-label="返回 briansharelife 品牌官網">
+      <img src="./assets/briansharelife-logo-gold.svg" alt="briansharelife">
+      <span class="product-name">基本財務評測</span>
+    </a>
+    <div class="advisor-mini" aria-label="本評測由 RFA 退休理財規劃顧問葉冠庭協助">
+      <img class="advisor-mini-photo" src="./assets/brian-avatar.jpg" alt="顧問葉冠庭">
+      <span><strong>葉冠庭</strong><small>RFA 退休理財規劃顧問</small></span>
+      <img class="advisor-mini-badge" src="./assets/rfa-logo.png" alt="RFA 標章">
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-copy">
+      <p class="eyebrow">BRIANSHARELIFE · 3 分鐘基本財務評測</p>
+      <h1>把你的財務狀況，<br><em>攤開來看。</em></h1>
+      <p class="hero-lead">先從基本款開始。輸入 9 項資料，一次看清現金流、債務、投資與緊急準備，再決定是否需要進一步分析。</p>
+      <div class="trust-row"><span>不需登入</span><span>不儲存資料</span><span>即時計算</span></div>
+    </div>
+    <aside class="hero-note"><span class="note-number">5</span><div><strong>個關鍵財務指標</strong><p>沒有奇蹟，只有方法。先找到最重要的一步，再慢慢把財務體質穩下來。</p></div></aside>
+  </section>
+
+  <section class="advisor-panel" aria-labelledby="advisor-title">
+    <div class="advisor-portrait-wrap"><img src="./assets/brian-avatar.jpg" alt="RFA 退休理財規劃顧問葉冠庭形象照"></div>
+    <div class="advisor-copy">
+      <p class="eyebrow">YOUR RFA ADVISOR</p>
+      <h2 id="advisor-title">專屬顧問客製化評估</h2>
+      <p>我是葉冠庭 Brian Yeh，陪你把複雜的財務資料整理成可以理解、可以採取行動的下一步。</p>
+      <div class="advisor-tags"><span>獨立財務顧問</span><span>不靠金融商品佣金</span></div>
+    </div>
+    <div class="advisor-credential">
+      <img src="./assets/rfa-logo.png" alt="RFA Retirement Financial Advisor 標章">
+      <div><strong>葉冠庭</strong><span>RFA 退休理財規劃顧問</span><small>證書編號 RFAC1145525</small></div>
+    </div>
+    <p class="advisor-privacy">本頁資料只在你的瀏覽器當下計算，不會傳送給顧問、協會或第三方。</p>
+  </section>
+
+  <form class="workspace" id="assessmentForm" novalidate>
+    <section class="form-card">
+      <div class="section-heading"><div><span>01</span><h2>你的財務資料</h2></div><p id="progress">0 / 9 已填寫</p></div>
+      <p class="section-intro">請以目前平均狀況填寫，金額皆為新台幣。</p>
+      <div class="field-grid" id="financialFields"></div>
+      <fieldset class="emergency-field">
+        <legend>你是否已將一筆資金明確保留為緊急預備金？</legend>
+        <p>這筆錢應可隨時動用，且不包含日常開銷帳戶。</p>
+        <div class="segmented">
+          <button type="button" data-emergency="yes" aria-pressed="false">是，已準備</button>
+          <button type="button" class="active" data-emergency="no" aria-pressed="true">尚未準備</button>
+        </div>
+      </fieldset>
+
+      <section class="retirement-form" aria-labelledby="retirement-title">
+        <div class="section-heading compact"><div><span>02</span><h2 id="retirement-title">退休準備資訊</h2></div><p>初步盤點</p></div>
+        <p class="section-intro">這裡先整理退休時間與制度方向，不計算法定退休給付。</p>
+        <div class="retirement-grid">
+          <label class="field"><span>目前年齡</span><div class="plain-input"><input name="currentAge" type="number" inputmode="numeric" min="18" max="100" value="30"><span>歲</span></div></label>
+          <label class="field"><span>開始工作年齡</span><div class="plain-input"><input name="startWorkAge" type="number" inputmode="numeric" min="15" max="100" value="25"><span>歲</span></div></label>
+          <label class="field"><span>預計退休年齡</span><div class="plain-input"><input name="retireAge" type="number" inputmode="numeric" min="40" max="100" value="65"><span>歲</span></div><small class="error age-error" hidden>退休年齡需大於目前年齡</small></label>
+          <label class="field"><span>職業身分類別</span><select name="occupation"><option>勞工</option><option>公務人員</option><option>軍職人員</option><option>私校教職</option><option>公校教職</option><option>國民年金</option></select></label>
+          <label class="field labor-only"><span>主要退休制度</span><select name="pensionSystem"><option>勞退新制</option><option>勞退舊制</option><option>新舊制並存</option><option>其他／待確認</option></select></label>
+          <label class="field"><span>預估年薪資成長率</span><div class="plain-input"><input name="salaryGrowth" type="number" inputmode="decimal" min="0" max="20" step="0.1" value="1.5"><span>%</span></div></label>
+          <label class="field labor-only"><span>勞退自願提繳</span><div class="plain-input"><input name="selfContribution" type="number" inputmode="decimal" min="0" max="6" step="1" value="0"><span>%</span></div></label>
+          <label class="field labor-only"><span>勞退個人專戶現值</span><div class="money-input"><span>NT$</span><input name="pensionAccount" type="number" inputmode="numeric" min="0" step="1" value="0"></div></label>
+        </div>
+        <div class="scope-note"><strong>計算範圍說明</strong><p>職業身分改變時，只顯示適用的基本欄位。本區不包含勞保老年給付、國民年金、公教退撫、稅費或投資報酬精算。</p></div>
+      </section>
+      <button class="primary-button" type="submit">查看我的基本財務報告 <span aria-hidden="true">→</span></button>
+    </section>
+
+    <aside class="guide-card">
+      <p class="eyebrow">評估基準</p><h3>一份好財務體質<br>通常長這樣</h3>
+      <ul><li><span>20%+</span><div><strong>儲蓄率</strong><small>保留足夠的財務彈性</small></div></li><li><span>&lt;20%</span><div><strong>負債收入比</strong><small>債務不過度壓縮生活</small></div></li><li><span>10%+</span><div><strong>投資率</strong><small>穩定累積長期資產</small></div></li><li><span>3–6</span><div><strong>預備金月數</strong><small>應對突發收入中斷</small></div></li></ul>
+      <div class="formula-note"><strong>基本款定位</strong><p>這份評測先協助你辨識財務結構。若需要結合投保年資、退休制度與個人專戶進行深入分析，將由顧問本人使用 RFA 專業系統協助。</p></div>
+    </aside>
+  </form>
+
+  <section class="results" id="result" aria-live="polite" hidden>
+    <div class="result-top"><div class="score-ring"><div><strong id="score">0</strong><span>/ 100</span></div></div><div class="result-summary"><p class="eyebrow">你的基本評測結果</p><h2>財務健康等級：<span id="level">—</span></h2><p id="levelText"></p></div><button class="text-button" type="button" id="resetButton">重新填寫</button></div>
+    <div class="metric-grid" id="metricGrid"></div>
+    <div class="recommendations"><div class="recommendation-title"><span>優先順序</span><h3>你的三項改善建議</h3></div><ol id="suggestions"></ol></div>
+    <div class="retirement-result"><div class="retirement-result-heading"><p class="eyebrow">RETIREMENT READINESS</p><h3>退休準備初步盤點</h3><span id="retirementStatus"></span></div><div class="retirement-facts" id="retirementFacts"></div><ul id="retirementSuggestions"></ul><p class="retirement-disclaimer">此結果為準備度檢視，不等同台灣退休協會、勞保局或主管機關之正式退休金計算結果。</p></div>
+    <div class="deep-analysis"><div><p class="eyebrow">NEXT STEP</p><h3>想把退休制度與實際資料算得更深入？</h3><p>進階分析將由葉冠庭本人透過 RFA 專業系統協助，不需要提供顧問帳號密碼給任何人。</p></div><a href="../../#booking">預約 RFA 深入分析 <span>→</span></a></div>
+  </section>
+
+  <footer><div class="disclaimer"><strong>重要提醒</strong><p>本工具僅供初步財務檢視，不構成投資、保險或法律建議。實際財務決策前，請依個人需求諮詢合格專業人士。</p></div><div class="footer-line"><a href="../../"><img src="./assets/briansharelife-logo-gold.svg" alt="briansharelife"></a><p>想更深入了解？<strong>返回品牌官網預約初診。</strong></p></div><p>© 2026 briansharelife · 你的資料不會被傳送或儲存</p></footer>
+</main>
+<script src="./app.js"></script>
+</body>
+</html>
