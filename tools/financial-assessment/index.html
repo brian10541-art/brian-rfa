@@ -86,11 +86,21 @@
   </form>
 
   <section class="results" id="result" aria-live="polite" hidden>
+    <div class="print-header"><img src="./assets/briansharelife-logo-gold.svg" alt="briansharelife"><div><strong>基本財務評測報告</strong><span id="reportDate"></span></div></div>
     <div class="result-top"><div class="score-ring"><div><strong id="score">0</strong><span>/ 100</span></div></div><div class="result-summary"><p class="eyebrow">你的基本評測結果</p><h2>財務健康等級：<span id="level">—</span></h2><p id="levelText"></p></div><button class="text-button" type="button" id="resetButton">重新填寫</button></div>
     <div class="metric-grid" id="metricGrid"></div>
     <div class="recommendations"><div class="recommendation-title"><span>優先順序</span><h3>你的三項改善建議</h3></div><ol id="suggestions"></ol></div>
     <div class="retirement-result"><div class="retirement-result-heading"><p class="eyebrow">RETIREMENT READINESS</p><h3>退休準備初步盤點</h3><span id="retirementStatus"></span></div><div class="retirement-facts" id="retirementFacts"></div><ul id="retirementSuggestions"></ul><p class="retirement-disclaimer">此結果為準備度檢視，不等同台灣退休協會、勞保局或主管機關之正式退休金計算結果。</p></div>
-    <div class="deep-analysis"><div><p class="eyebrow">NEXT STEP</p><h3>想把退休制度與實際資料算得更深入？</h3><p>進階分析將由葉冠庭本人透過 RFA 專業系統協助，不需要提供顧問帳號密碼給任何人。</p></div><a href="../../#booking">預約 RFA 深入分析 <span>→</span></a></div>
+    <div class="report-actions" aria-labelledby="report-actions-title">
+      <div class="report-actions-heading"><p class="eyebrow">SAVE OR CONTINUE</p><h3 id="report-actions-title">保存報告，或安排下一步</h3><p>評測結果只存在目前頁面。你可以自行寄送、儲存成 PDF，或預約顧問進行深入分析。</p></div>
+      <label class="report-email"><span>報告收件 Email</span><input id="reportEmail" type="email" inputmode="email" autocomplete="email" placeholder="name@example.com" aria-describedby="emailHelp"><small id="emailHelp">本站不會儲存 Email；按下寄送後，將開啟你的郵件 App 由你確認。</small></label>
+      <div class="report-action-grid">
+        <button class="report-action-button email-action" type="button" id="emailReportButton"><span>01</span><strong>Email 寄送報告</strong><small>開啟郵件 App 並預填摘要</small></button>
+        <button class="report-action-button pdf-action" type="button" id="pdfReportButton"><span>02</span><strong>下載 PDF 報告</strong><small>在列印畫面選擇儲存為 PDF</small></button>
+        <a class="report-action-button booking-action" href="../../#booking"><span>03</span><strong>預約 RFA 顧問</strong><small>由葉冠庭本人進行深入分析</small></a>
+      </div>
+      <p class="report-action-message" id="reportActionMessage" role="status" aria-live="polite"></p>
+    </div>
   </section>
 
   <footer><div class="disclaimer"><strong>重要提醒</strong><p>本工具僅供初步財務檢視，不構成投資、保險或法律建議。實際財務決策前，請依個人需求諮詢合格專業人士。</p></div><div class="footer-line"><a href="../../"><img src="./assets/briansharelife-logo-gold.svg" alt="briansharelife"></a><p>想更深入了解？<strong>返回品牌官網預約初診。</strong></p></div><p>© 2026 briansharelife · 你的資料不會被傳送或儲存</p></footer>

@@ -20,6 +20,7 @@ const form = document.querySelector("#assessmentForm");
 const fieldsRoot = document.querySelector("#financialFields");
 const resultRoot = document.querySelector("#result");
 let hasEmergencyFund = false;
+let latestResult = null;
 
 fieldsRoot.innerHTML = fieldDefinitions.map(([key, label, hint, required]) => `
   <label class="field">
@@ -108,6 +109,7 @@ function calculate() {
 }
 
 function render(result) {
+  latestResult = result;
   resultRoot.hidden = false;
   resultRoot.className = `results level-${result.level}`;
   document.querySelector("#score").textContent = result.score;
@@ -119,8 +121,68 @@ function render(result) {
   document.querySelector("#retirementStatus").textContent = result.retirement.status;
   document.querySelector("#retirementFacts").innerHTML = `<article><small>距離預計退休</small><strong>${result.retirement.yearsToRetirement}<span> 年</span></strong></article><article><small>預計總工作年資</small><strong>${result.retirement.workingYears}<span> 年</span></strong></article><article><small>目前盤點制度</small><strong class="text-value">${result.retirement.occupation}<span>· ${result.retirement.pensionSystem}</span></strong></article>`;
   document.querySelector("#retirementSuggestions").innerHTML = result.retirement.suggestions.map((item) => `<li>${item}</li>`).join("");
+  document.querySelector("#reportDate").textContent = `產出日期：${new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" }).format(new Date())}`;
   resultRoot.scrollIntoView({ behavior: "smooth", block: "start" });
 }
+
+function reportText(result) {
+  return [
+    "briansharelife 基本財務評測報告",
+    `產出日期：${new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" }).format(new Date())}`,
+    "",
+    `財務健康分數：${result.score} / 100`,
+    `財務健康等級：${result.level}`,
+    levelText[result.level],
+    "",
+    "四項關鍵指標",
+    `- 儲蓄率：${result.savingsRate.toFixed(1)}%`,
+    `- 負債收入比：${result.debtIncomeRatio.toFixed(1)}%`,
+    `- 投資率：${result.investmentRate.toFixed(1)}%`,
+    `- 緊急預備金：${result.emergencyMonths.toFixed(1)} 個月`,
+    "",
+    "三項優先改善建議",
+    ...result.suggestions.map((item, index) => `${index + 1}. ${item}`),
+    "",
+    "退休準備初步盤點",
+    `- ${result.retirement.status}`,
+    `- 距離預計退休：${result.retirement.yearsToRetirement} 年`,
+    `- 預計總工作年資：${result.retirement.workingYears} 年`,
+    `- 目前盤點制度：${result.retirement.occupation} · ${result.retirement.pensionSystem}`,
+    ...result.retirement.suggestions.map((item) => `- ${item}`),
+    "",
+    "重要提醒：本工具僅供初步財務檢視，不構成投資、保險或法律建議。",
+    "預約 RFA 深入分析：https://brian10541-art.github.io/brian-rfa/#booking",
+  ].join("\n");
+}
+
+document.querySelector("#emailReportButton").addEventListener("click", () => {
+  if (!latestResult) return;
+  const emailInput = document.querySelector("#reportEmail");
+  const message = document.querySelector("#reportActionMessage");
+  if (!emailInput.value || !emailInput.checkValidity()) {
+    message.textContent = "請先輸入有效的 Email 地址。";
+    message.classList.add("error-message");
+    emailInput.focus();
+    return;
+  }
+  message.classList.remove("error-message");
+  message.textContent = "正在開啟你的郵件 App；請確認內容後再寄出。";
+  const subject = encodeURIComponent(`briansharelife 基本財務評測報告｜${latestResult.level} ${latestResult.score} 分`);
+  const body = encodeURIComponent(reportText(latestResult));
+  window.location.href = `mailto:${encodeURIComponent(emailInput.value.trim())}?subject=${subject}&body=${body}`;
+});
+
+document.querySelector("#pdfReportButton").addEventListener("click", () => {
+  if (!latestResult) return;
+  const originalTitle = document.title;
+  const date = new Date().toISOString().slice(0, 10);
+  document.title = `briansharelife-基本財務評測-${date}`;
+  document.querySelector("#reportActionMessage").textContent = "請在列印畫面選擇「儲存為 PDF」。";
+  const restoreTitle = () => { document.title = originalTitle; window.removeEventListener("afterprint", restoreTitle); };
+  window.addEventListener("afterprint", restoreTitle);
+  window.print();
+  window.setTimeout(() => { document.title = originalTitle; }, 1500);
+});
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -137,7 +199,8 @@ form.addEventListener("submit", (event) => {
 });
 
 document.querySelector("#resetButton").addEventListener("click", () => {
-  form.reset(); hasEmergencyFund = false; resultRoot.hidden = true;
+  form.reset(); hasEmergencyFund = false; latestResult = null; resultRoot.hidden = true;
+  document.querySelector("#reportActionMessage").textContent = "";
   document.querySelectorAll("[data-emergency]").forEach((item) => { const active = item.dataset.emergency === "no"; item.classList.toggle("active", active); item.setAttribute("aria-pressed", String(active)); });
   updateOccupationFields(); updateProgress(); window.scrollTo({ top: 0, behavior: "smooth" });
 });
